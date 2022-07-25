@@ -1,0 +1,75 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material/drawer": "^10.0.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "array-move": "^3.0.1",
+    "axios": "^0.21.1",
+    "bloodhound": "^1.0.0",
+    "core-js": "^3.9.1",
+    "gulp-sass": "4.1.0",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "multiselect-react-dropdown": "^1.6.11",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-bootstrap-typeahead": "^5.1.4",
+    "react-contenteditable": "^3.3.5",
+    "react-dom": "^17.0.1",
+    "react-dropdown": "^1.9.2",
+    "react-moment": "^1.1.1",
+    "react-paginate": "^7.1.2",
+    "react-read-more-read-less": "^1.0.7",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-scroll": "^1.8.2",
+    "react-select": "^4.2.1",
+    "react-sortable-hoc": "^2.0.0",
+    "react-tag-autocomplete": "^6.1.0",
+    "react-toastify": "^6.2.0",
+    "react-typeahead": "^2.0.0-alpha.8",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.33.0",
+    "socket.io-client": "^4.0.1",
+    "typeahead": "^0.2.2",
+    "web-vitals": "^1.1.1",
+    "webpack": "4.44.2"
+  },
+  "scripts": {
+    "generateSW": "workbox generateSW workbox-generateSW.js && workbox injectManifest workbox-config.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "serve": "http-server -p 1336 build -c-1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "homepage": ".",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "imports-loader": "^2.0.0"
+  }
+}

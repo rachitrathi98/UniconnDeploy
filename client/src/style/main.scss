@@ -1,0 +1,29 @@
+@import "./shared/colors";
+@import "./shared/mixins";
+@import "./shared/loading";
+@import "./shared/list";
+@import "./shared/editProfile";
+@import "./shared/form";
+@import "./shared/profile";
+@import "./shared/detail";
+@import "./shared/updatedLoading";
+
+@import "./layout/home";
+@import "./layout/footer";
+@import "./layout/layout";
+@import "./layout/Header";
+@import "./layout/sidebar";
+@import "./layout/backdrop";
+
+@import "./forums/decision";
+@import "./forums/privateforumhome";
+@import "./forums/privateforumanswer";
+@import "./forums/popup";
+
+@import "./chats/chat";
+
+@import "./profile/teacherProfile.scss";
+
+@import "./reviews/Detail.scss";
+@import "./error/card";
+@import "./other/other";

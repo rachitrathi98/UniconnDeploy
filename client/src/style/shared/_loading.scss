@@ -1,0 +1,99 @@
+.loading {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.loading div {
+  position: absolute;
+  background: #000;
+  opacity: 1;
+  border-radius: 50%;
+  animation: loading 1.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.loading div:nth-child(2) {
+  animation-delay: -0.7s;
+}
+
+@keyframes loading {
+  0% {
+    top: 28px;
+    left: 28px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -1px;
+    left: -1px;
+    width: 58px;
+    height: 58px;
+    opacity: 0;
+  }
+}
+
+.tt-input {
+  z-index: 10;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-input,
+.tt-hint {
+  width: 27rem;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+.tt-hint {
+  color: #999;
+}
+
+/* --------------------------------------------------------- */
+
+.tt-menu {
+  /* used to be tt-dropdown-menu in older versions */
+  z-index: 9999;
+  width: 27rem;
+  margin-top: 7px;
+  padding: 4px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+// .center {
+
+// }
+
+.tt-suggestion {
+  z-index: 9999;
+  padding: 3px 20px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor,
+.tt-suggestion:hover {
+  z-index: 9999;
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion p {
+  z-index: 9999;
+  margin: 0;
+}
+
+#searchBarStudent {
+  width: 27rem;
+}

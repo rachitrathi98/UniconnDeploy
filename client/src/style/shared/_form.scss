@@ -1,0 +1,110 @@
+// Everything form related is over here.
+.formInputs {
+  border-radius: 20px;
+}
+
+.profile-pic {
+  position: relative;
+  display: inline-block;
+}
+
+.edit-button {
+  padding-top: 7px;
+  padding-right: 7px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.edit-button a {
+  color: #000;
+}
+
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.input-file:focus + label,
+.input-file + label:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+#grip {
+  fill:#fff;
+  cursor: grabbing;
+}
+
+#grip:hover{
+  fill:"lightgrey"
+}
+
+#form-margin {
+  background-color: white;
+  border-radius: 25px;
+}
+
+#edit-student-teacher {
+  background-color: white;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+@media only screen and (min-width: 1025px) {
+  #form-margin {
+    margin-left: 200px;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 50%;
+    background-color: white;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+
+  #edit-student-teacher {
+    width: 40%;
+    background-color: white;
+    border-radius: 25px;
+  }
+}
+
+.bio {
+  display: none;
+}
+
+@media only screen and (min-width: 1450px) {
+  .bio {
+    border-radius: 25px;
+    padding: 20px 20px;
+    display: block;
+    margin-right: 30px;
+    margin-top: 560px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+
+  #triangle-up {
+    float: left;
+    margin-top: 50px;
+    margin-right: 20px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid blue;
+  }
+}

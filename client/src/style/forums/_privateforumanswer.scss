@@ -1,0 +1,50 @@
+.list-group-item {
+  border: none;
+}
+
+.answer-inputs {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border: 0.1px solid lightgrey;
+  outline: none; //TODO: change outline color
+}
+
+.answer-prop {
+  white-space: pre-wrap;
+  font-size: 1rem;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.answer-reply {
+  white-space: pre-wrap;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.question-prop {
+  font-size: 1.1rem;
+  white-space: pre-wrap;
+}
+
+.moment-date {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .answer-prop {
+    white-space: pre-wrap;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  .question-prop {
+    white-space: pre-wrap;
+    font-size: 1rem;
+  }
+  .moment-date {
+    font-size: 0.66rem;
+  }
+}

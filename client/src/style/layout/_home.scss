@@ -1,0 +1,48 @@
+.div-jumbotron {
+  width: 70%;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+.btn-large {
+  color: #24a0ed;
+  background-color: white;
+  width: 50%;
+  margin-top: 0.25rem;
+  margin-left: 25%;
+  border-radius: 50px;
+}
+
+.team {
+  width: 175px;
+  height: 175px;
+}
+
+#youtube-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 40px;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 315px;
+}
+
+@media only screen and (max-width: 700px) {
+  .team {
+    width: 125px;
+    height: 125px;
+  }
+}

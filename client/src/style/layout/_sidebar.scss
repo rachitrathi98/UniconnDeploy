@@ -1,0 +1,16 @@
+.sidebar button {
+  border-radius: 25px;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  border-radius: 25px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}

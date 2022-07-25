@@ -1,0 +1,40 @@
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: #f5f4f4;
+}
+
+.container-modified {
+  padding-left: 5%;
+  padding-right: 7%;
+}
+
+@media only screen and (max-width: 768px) {
+  .button-student {
+    margin-left: 0;
+  }
+  .loadingSign {
+    left: 45%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .button-student {
+    margin-left: 7.5%;
+  }
+  .button-teacher-student {
+    width: 75%;
+  }
+  .loadingSign {
+    left: 45%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .loadingSign {
+    left: 22%;
+  }
+}
+
+.profile__p {
+  margin: 0 0;
+}

@@ -1,0 +1,32 @@
+.pfp {
+  border-radius: 50%;
+  height: 200px;
+  margin: 0 auto;
+  padding: 3px 0;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.profile {
+  background-image: url("../../assets/images/SPIT.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 15rem;
+  border-radius: 20px;
+}
+
+.mainTeacher {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+}
+
+.projectList {
+  background-color: white;
+  border-radius: 20px;
+}
