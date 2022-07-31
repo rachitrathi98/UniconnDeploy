@@ -7,18 +7,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const fs = require("fs");
 
-const protocol =
-  process.env.NODE_ENV === "production"
-    ? require("https").createServer(
-        {
-          key: fs.readFileSync("/etc/letsencrypt/live/uniconn.in/privkey.pem"),
-          cert: fs.readFileSync(
-            "/etc/letsencrypt/live/uniconn.in/fullchain.pem",
-          ),
-        },
-        app,
-      )
-    : require("http").createServer(app);
+const protocol = require("http").createServer(app);
 
 const Student = require("./models/student");
 const Teacher = require("./models/teacher");
