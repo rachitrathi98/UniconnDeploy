@@ -217,7 +217,7 @@ const EditTeachersProfile = (props) => {
         ...constant,
         field_of_interest: field,
         links,
-        collegeId: dropDownOption ? dropDownOption.value : undefined,
+        // collegeId: dropDownOption ? dropDownOption.value : undefined,
         educational_qualification: educational_qualification,
       },
       (res) => {
@@ -240,7 +240,6 @@ const EditTeachersProfile = (props) => {
     return (
       !multiOptionCheck &&
       valid &&
-      !(dropDownOption === undefined) &&
       (values.name &&
         values.name.length &&
         values.department &&
@@ -377,7 +376,7 @@ const EditTeachersProfile = (props) => {
               />
               {<div style={{ color: "red" }}>{errors.position}</div>}
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <Dropdown
                 id="multi-drop"
                 options={collegeOptions}
@@ -386,7 +385,7 @@ const EditTeachersProfile = (props) => {
                 placeholder="Select your College*"
                 isDisabled={isDisabled}
               />
-            </div>
+            </div> */}
             <div className="form-group">
               <label htmlFor="description" style={labelStyles}>
                 About Me

@@ -147,9 +147,9 @@ const EditStudentProfile = (props) => {
           : process.env.NODE_ENV === "production"
           ? `${process.env.REACT_APP_BASE_URL}/api/auth/${props.user.photo}`
           : `http://localhost:${process.env.PORT}/api/auth/${props.user.photo}`,
-      collegeId: props.user.collegeId
-        ? props.user.collegeId._id
-        : { value: "", label: "select your college" },
+      // collegeId: props.user.collegeId
+      //   ? props.user.collegeId._id
+      //   : { value: "", label: "select your college" },
       university_id: props.user.university_id,
       name: props.user.name,
       batch: props.user.batch,
@@ -216,15 +216,12 @@ const EditStudentProfile = (props) => {
     return (
       !multiOptionCheck &&
       valid &&
-      !(dropDownOption === undefined) &&
-      (values.name &&
+      values.name &&
         values.name.length &&
         values.batch &&
         values.batch.length &&
         values.branch &&
-        values.branch.length &&
-        values.university_id &&
-        values.university_id.length) !== 0
+        values.branch.length
     );
   }
   const onSelect = (selectedList, selectedItem) => {
@@ -346,7 +343,7 @@ const EditStudentProfile = (props) => {
               />
               {<div style={{ color: "red" }}>{errors.university_id}</div>}
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="multi-drop" style={labelStyles}>
                 College*
               </label>
@@ -358,7 +355,7 @@ const EditStudentProfile = (props) => {
                 placeholder="Select your College*"
                 isDisabled={isDisabled}
               />
-            </div>
+            </div> */}
             <div className="form-group">
               <label htmlFor="description" style={labelStyles}>
                 About Me
