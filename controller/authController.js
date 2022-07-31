@@ -48,7 +48,7 @@ exports.loginCallbackTeacher = (req, res, next) => {
     res.cookie("jwt", jwtToken, {
       expires: new Date(
         Date.now() +
-          process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 10 * 60 * 1000,
+        4 * 24 * 60 * 10 * 60 * 1000,
       ),
       httpOnly: true,
       secure: req.secure || req.headers["x-forwarded-proto"] === "https",
@@ -91,7 +91,7 @@ exports.loginCallbackStudent = (req, res, next) => {
     res.cookie("jwt", jwtToken, {
       expires: new Date(
         Date.now() +
-          process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 10 * 60 * 1000,
+          4 * 24 * 60 * 10 * 60 * 1000,
       ),
       httpOnly: true,
       secure: req.secure || req.headers["x-forwarded-proto"] === "https",
