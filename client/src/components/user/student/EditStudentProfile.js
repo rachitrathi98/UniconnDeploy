@@ -34,13 +34,13 @@ const EditStudentProfile = (props) => {
     optionContainer: { borderRadius: "20px" },
   };
 
-  const {
-    collegeDropdown: { collegeOptions, isDisabled },
-  } = props;
+  // const {
+  //   collegeDropdown: { collegeOptions, isDisabled },
+  // } = props;
   const [values, setValues] = useState({
     description: "",
     photo: "",
-    collegeId: "",
+    // collegeId: "",
     name: "",
     batch: "",
     branch: "",
@@ -175,15 +175,15 @@ const EditStudentProfile = (props) => {
     if (props.user.links && props.user.links !== [])
       setLinks([...props.user.links]);
 
-    collegeOptions.map((drop, index) => {
-      if (
-        props.user.collegeId &&
-        drop.value === String(props.user.collegeId._id)
-      ) {
-        setdropDownOption(drop);
-      }
-      return null;
-    });
+    // collegeOptions.map((drop, index) => {
+    //   if (
+    //     props.user.collegeId &&
+    //     drop.value === String(props.user.collegeId._id)
+    //   ) {
+    //     setdropDownOption(drop);
+    //   }
+    //   return null;
+    // });
 
     setmultiDropdownOptions(data);
     // eslint-disable-next-line
@@ -242,10 +242,10 @@ const EditStudentProfile = (props) => {
     setmultiDropdownOptions(selectedList);
   };
 
-  const onDropSelect = (selectedItem) => {
-    setdropDownOption(selectedItem);
-    setValues({ ...values, collegeId: selectedItem.value });
-  };
+  // const onDropSelect = (selectedItem) => {
+  //   setdropDownOption(selectedItem);
+  //   setValues({ ...values, collegeId: selectedItem.value });
+  // };
   return values.photo ? (
     <Fragment>
       <Header />

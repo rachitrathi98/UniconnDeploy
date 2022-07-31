@@ -24,9 +24,9 @@ const EditTeachersProfile = (props) => {
 
   const imgStyles = { borderRadius: "50%", height: "10rem" };
 
-  const {
-    collegeDropdown: { collegeOptions, isDisabled },
-  } = props;
+  // const {
+  //   collegeDropdown: { collegeOptions, isDisabled },
+  // } = props;
   const [values, setValues] = useState({
     description: "",
     photo: "",
@@ -186,19 +186,19 @@ const EditTeachersProfile = (props) => {
 
     setEducationalQualification(props.user.educational_qualification);
 
-    collegeOptions.map((drop, index) => {
-      console.log(drop, props.user);
+    // collegeOptions.map((drop, index) => {
+    //   console.log(drop, props.user);
 
-      if (
-        props.user.collegeId &&
-        drop.value === String(props.user.collegeId._id)
-      ) {
-        console.log(drop, props.user.collegeId);
-        setdropDownOption(drop);
-      }
+    //   if (
+    //     props.user.collegeId &&
+    //     drop.value === String(props.user.collegeId._id)
+    //   ) {
+    //     console.log(drop, props.user.collegeId);
+    //     setdropDownOption(drop);
+    //   }
 
-      return null;
-    });
+    //   return null;
+    // });
 
     setmultiDropdownOptions(data);
     // eslint-disable-next-line
@@ -282,10 +282,10 @@ const EditTeachersProfile = (props) => {
     setmultiDropdownOptions(selectedList);
   };
 
-  const onDropSelect = (selectedItem) => {
-    setdropDownOption(selectedItem);
-    setValues({ ...values, collegeId: selectedItem.value });
-  };
+  // const onDropSelect = (selectedItem) => {
+  //   setdropDownOption(selectedItem);
+  //   setValues({ ...values, collegeId: selectedItem.value });
+  // };
 
   return (
     <Fragment>
