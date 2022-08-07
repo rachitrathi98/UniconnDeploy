@@ -51,7 +51,7 @@ const Register = (props) => {
       <EditStudentProfile
         user={user}
         history={props.history}
-        // collegeDropdown={{ collegeOptions, isDisabled }}
+        collegeDropdown={{ collegeOptions, isDisabled }}
       />
     );
   else if (user.role === "teacher")
@@ -59,7 +59,7 @@ const Register = (props) => {
       <EditTeachersProfile
         user={user}
         history={props.history}
-        // collegeDropdown={{ collegeOptions, isDisabled }}
+        collegeDropdown={{ collegeOptions, isDisabled }}
       />
     );
   else if (isAuth().role === "admin")
@@ -67,7 +67,7 @@ const Register = (props) => {
       <EditAdminProfile
         user={isAuth()}
         history={props.history}
-        // collegeOptions={collegeOptions}
+        collegeOptions={collegeOptions}
       />
     );
   else return <Loading />;

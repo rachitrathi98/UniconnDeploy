@@ -34,13 +34,13 @@ const EditStudentProfile = (props) => {
     optionContainer: { borderRadius: "20px" },
   };
 
-  // const {
-  //   collegeDropdown: { collegeOptions, isDisabled },
-  // } = props;
+  const {
+    collegeDropdown: { collegeOptions, isDisabled },
+  } = props;
   const [values, setValues] = useState({
     description: "",
     photo: "",
-    // collegeId: "",
+    collegeId: "",
     name: "",
     batch: "",
     branch: "",
@@ -147,9 +147,9 @@ const EditStudentProfile = (props) => {
           : process.env.NODE_ENV === "production"
           ? `${process.env.REACT_APP_BASE_URL}/api/auth/${props.user.photo}`
           : `http://localhost:${process.env.PORT}/api/auth/${props.user.photo}`,
-      // collegeId: props.user.collegeId
-      //   ? props.user.collegeId._id
-      //   : { value: "", label: "select your college" },
+      collegeId: props.user.collegeId
+        ? props.user.collegeId._id
+        : { value: "", label: "select your college" },
       university_id: props.user.university_id,
       name: props.user.name,
       batch: props.user.batch,
@@ -175,15 +175,15 @@ const EditStudentProfile = (props) => {
     if (props.user.links && props.user.links !== [])
       setLinks([...props.user.links]);
 
-    // collegeOptions.map((drop, index) => {
-    //   if (
-    //     props.user.collegeId &&
-    //     drop.value === String(props.user.collegeId._id)
-    //   ) {
-    //     setdropDownOption(drop);
-    //   }
-    //   return null;
-    // });
+    collegeOptions.map((drop, index) => {
+      if (
+        props.user.collegeId &&
+        drop.value === String(props.user.collegeId._id)
+      ) {
+        setdropDownOption(drop);
+      }
+      return null;
+    });
 
     setmultiDropdownOptions(data);
     // eslint-disable-next-line
@@ -242,10 +242,10 @@ const EditStudentProfile = (props) => {
     setmultiDropdownOptions(selectedList);
   };
 
-  // const onDropSelect = (selectedItem) => {
-  //   setdropDownOption(selectedItem);
-  //   setValues({ ...values, collegeId: selectedItem.value });
-  // };
+  const onDropSelect = (selectedItem) => {
+    setdropDownOption(selectedItem);
+    setValues({ ...values, collegeId: selectedItem.value });
+  };
   return values.photo ? (
     <Fragment>
       <Header />
@@ -343,7 +343,7 @@ const EditStudentProfile = (props) => {
               />
               {<div style={{ color: "red" }}>{errors.university_id}</div>}
             </div>
-            {/* <div className="form-group">
+            <div className="form-group">
               <label htmlFor="multi-drop" style={labelStyles}>
                 College*
               </label>
@@ -355,7 +355,7 @@ const EditStudentProfile = (props) => {
                 placeholder="Select your College*"
                 isDisabled={isDisabled}
               />
-            </div> */}
+            </div>
             <div className="form-group">
               <label htmlFor="description" style={labelStyles}>
                 About Me
