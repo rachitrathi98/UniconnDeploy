@@ -8,6 +8,7 @@ import { isAuth } from "../../utils/helper";
 // import { isAuth } from "../../utils/helper";
 
 const QuestionCard = (props) => {
+  
   const { adminApprove } = props;
   const pathname = window.location.href;
   const isPrivate = pathname.includes("private");
@@ -46,7 +47,7 @@ const QuestionCard = (props) => {
     console.log("send this data via mail");
     postAction("/auth/report", { hey: "efsdfs" });
   };
-
+  console.log(props.question)
   return (
     <div className="home-forum question-box my-1 list-border">
       <div
