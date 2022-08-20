@@ -30,7 +30,7 @@ exports.loginCallbackTeacher = (req, res, next) => {
 
     if (
       !(
-        // process.env.ALLOWED_DOMAINS.includes(user.emailId.split("@")[1]) ||
+        process.env.ALLOWED_DOMAINS.includes(user.emailId.split("@")[1]) ||
         process.env.ADMIN_EMAILS.includes(user.emailId) ||
         process.env.TEACHERS_EMAILS.includes(user.emailId)
       )
@@ -73,7 +73,7 @@ exports.loginCallbackStudent = (req, res, next) => {
 
     if (
       !(
-        // process.env.ALLOWED_DOMAINS.includes(user.emailId.split("@")[1]) ||
+        process.env.ALLOWED_DOMAINS.includes(user.emailId.split("@")[1]) ||
         process.env.ADMIN_EMAILS.includes(user.emailId) ||
         process.env.STUDENTS_EMAILS.includes(user.emailId)
       )
@@ -142,9 +142,9 @@ exports.passportInit = (passport) => {
       },
       async (_accessToken, _refreshToken, profile, done) => {
         if (
-          // process.env.ALLOWED_DOMAINS.includes(
-          //   profile._json.email.split("@")[1],
-          // ) ||
+          process.env.ALLOWED_DOMAINS.includes(
+            profile._json.email.split("@")[1],
+          ) ||
           process.env.TEACHERS_EMAILS.includes(profile._json.email)
         ) {
           const results = await Student.find({
@@ -187,9 +187,9 @@ exports.passportInit = (passport) => {
       },
       async (_accessToken, _refreshToken, profile, done) => {
         if (
-          // process.env.ALLOWED_DOMAINS.includes(
-          //   profile._json.email.split("@")[1],
-          // ) ||
+          process.env.ALLOWED_DOMAINS.includes(
+            profile._json.email.split("@")[1],
+          ) ||
           process.env.STUDENTS_EMAILS.includes(profile._json.email)
         ) {
           const results = await Teacher.find({
